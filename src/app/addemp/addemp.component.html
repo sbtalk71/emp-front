@@ -1,0 +1,23 @@
+<h4>Add Employee to Database</h4>
+<hr>
+<div class='container-fluid'>
+    <form method="post" #empForm='ngForm' (ngSubmit)="onSubmit()">
+        <div class='form-group'>
+            <label>Employee Id</label>
+            <input type="text" class="form-control" name="empId" [(ngModel)]="empModel.empId">
+        </div>
+        <div class='form-group'>
+            <label>Name</label>
+            <input type="text" class="form-control" name="name" [(ngModel)]="empModel.name">
+        </div>
+        <div class='form-group'>
+            <label>Location</label>
+            <input type="text" class="form-control" name="city" [(ngModel)]="empModel.city">
+        </div>
+        <div class='form-group'>
+            <label>Salary</label>
+            <input type="text" class="form-control" name="salary" [(ngModel)]="empModel.salary">
+        </div>
+        <button class='btn btn-primary' type='submit'>Add Employee</button>
+    </form>
+</div>

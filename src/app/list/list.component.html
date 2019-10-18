@@ -1,0 +1,10 @@
+<h3>List of Employees</h3>
+<hr>
+<table class="table table-hoverr">
+    <tr *ngFor='let emp of empList'>
+        <td>{{emp.empId}}</td>
+        <td>{{emp.name}}</td>
+        <td>{{emp.city}}</td>
+        <td>{{emp.salary}}</td>
+    </tr>
+</table>

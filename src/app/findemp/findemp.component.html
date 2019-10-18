@@ -1,0 +1,21 @@
+<h3> Find An Employee Here</h3>
+<hr>
+<div class="container-fluid">
+    <form (ngSubmit)='onSubmit()'>
+        <div>
+            <label>Employee Id</label>
+            <input type="text" class='form-control' [(ngModel)]='empId' name="empId">
+        </div>
+        <button class='btn btn-primary' type='submit'>Find Now</button>
+    </form>
+</div>
+<div>
+    <table class="table">
+        <tr>
+            <td>{{emp.empId}}</td>
+            <td>{{emp.name}}</td>
+            <td>{{emp.city}}</td>
+            <td>{{emp.salary}}</td>
+        </tr>
+    </table>
+</div>
