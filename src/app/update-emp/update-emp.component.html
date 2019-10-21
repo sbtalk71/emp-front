@@ -1,1 +1,40 @@
-<p>update-emp works!</p>
+<h3>EMployee Update Page</h3>
+<hr>
+<div class='container'>
+<form (ngSubmit)='onSubmit()'>
+<div class='form-group'>
+    <label>Emp Id</label>
+    <input type="text" name="empId" [(ngModel)]="empId" class='form-control'>
+</div>
+    <button type="submit">Find</button>
+
+</form>
+</div>
+<div *ngIf='showFlag'>
+    <table class='table'>
+        <tr>
+            <td>{{emp.empId}}</td>
+            <td>{{emp.name}}</td>
+            <td>{{emp.city}}</td>
+            <td>{{emp.salary}}</td>
+            <td><button (click)='doEdit()'>Edit</button></td>
+        </tr>
+    </table>
+</div>
+<div *ngIf='showForm' class='container-fluid'>
+    <form (ngSubmit)='onSubmit2()'>
+        <div class='form-group'>
+            <input type="text" name="empId" [(ngModel)]="emp.empId" class='form-control'>
+        </div>
+        <div class='form-group'>
+            <input type="text" name="name" [(ngModel)]="emp.name" class='form-control'>
+        </div>
+        <div class='form-group'>
+            <input type="text" name="city" [(ngModel)]="emp.city" class='form-control'>
+        </div>
+        <div class='form-group'>
+            <input type="text" name="salary" [(ngModel)]="emp.salary" class='form-control'>
+        </div>
+        <button type="submit" class='btn btn-primary'>Update</button>
+    </form>
+</div>
